@@ -1,0 +1,34 @@
+/* Percolate Studio's javascript linting configuration (Meteor)
+ *
+ * Documentation on rules can be found at:
+ * http://eslint.org/docs/rules/ <- Optionally append the rulename
+ *
+ * Ensure changes are kept in sync with the base linting configuration.
+*/
+
+{
+  "extends": ".eslintrc-percolate",
+  "env": {
+    /* Allows global vars in a node environment to pass and enables certain rules */
+    "meteor": true,
+    "browser": true
+  },
+  "rules": {
+    
+    /* ---------------- Rules relaxed for Meteor's sake --------------------- */
+
+    /* allows the use of underscores at the beginning and end of var names (such as _id) */
+    "no-underscore-dangle": 0,
+
+    /* allows certain non-constructor functions to start with a capital letter, */
+    "new-cap": [2, { "capIsNewExceptions": ["Match", "Where", "Optional", "ObjectIncluding", "OneOf"]}],
+
+    /* relaxes unused vars to allow defining of globals that are unused */
+    "no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+
+    /* relaxes strict mode */
+    "strict": 0
+
+    /* ---------------------------------------------------------------------- */
+  }
+}
