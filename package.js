@@ -1,6 +1,6 @@
 Package.describe({
   name: "percolate:safe-reload",
-  version: "0.1.0",
+  version: "0.1.1",
   summary: "Provides a safety belt for recovering from a broken HCP on Cordova.",
   documentation: "README.md",
   git: "https://github.com/percolatestudio/safe-reload.git"
@@ -13,5 +13,5 @@ Package.onUse(function(api) {
 });
 
 Cordova.depends({
-  "com.percolatestudio.cordova.safereload": "https://github.com/percolatestudio/cordova-plugin-safe-reload/tarball/527527b708f3ea587a307f78d20b4bbc9466a0b2"
+  "com.percolatestudio.cordova.safereload": "https://github.com/percolatestudio/cordova-plugin-safe-reload/tarball/5f403974324314f5b779fe86f361aa5a6bc11643"
 });
